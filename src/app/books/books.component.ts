@@ -12,6 +12,7 @@ import { BookService } from '../book.service';
 export class BooksComponent {
   books: Book[]= [];
   formGroupBook : FormGroup
+  isEditing: boolean=false;
 
 
   constructor(private service: BookService,
@@ -45,4 +46,31 @@ save() {
     }
   )
 }
+delete(book: Book) {
+  this.service.delete(book).subscribe({
+    next: ()  => this.loadBooks()
+      
+    
+  }
+)
+}
+onClickupdate(book: Book) {
+  this.isEditing=true;
+ this.formGroupBook.setValue(book);
+  }
+clear(){
+
+  this.isEditing=false;
+  this.formGroupBook.reset()
+}
+update() {
+  this.service.update(this.formGroupBook.value).subscribe(
+   {
+     next: () =>{ this.loadBooks();
+       
+     this.formGroupBook.reset()
+     }
+   }
+  )
+   }
 }

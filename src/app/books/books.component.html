@@ -24,7 +24,19 @@
                     <input formControlName="preco" type="text" class="form-control" id="InputCourse" aria-describedby="CourseHelp">
                     <div id="emailHelp" class="form-text">Digite o preço do livro</div>
                   </div>
-                  <button class="btn btn-primary"(click)="save()">Salvar</button>
+                  <button *ngIf="!isEditing"
+                        
+                           class="btn btn-primary"
+                              (click)="save()">Salvar</button>
+                              
+                <button *ngIf="isEditing"
+                        
+                          class="btn btn-primary"
+                                    (click)="update()">Atualizar</button>
+                                    <button *ngIf="isEditing"
+                                    
+                                      class="btn btn-secondary ms-2" 
+                                                (click)="clear()">Cancelar</button>
            
                 <h2 class="text-center">Livros Cadastrados</h2>
                 <table class="table table-striped">
@@ -35,6 +47,8 @@
                       <th scope="col">Autor</th>
                       <th scope="col">Editora</th>
                       <th scope="col">Preço</th>
+                      <th scope="col">Remover</th>
+                      <th scope="col">Alterar</th>
                      
                     </tr>
                   </thead>
@@ -45,6 +59,8 @@
                         <th scope="col">{{b.autor}}</th>
                         <th scope="col">{{b.editora}}</th>
                         <th scope="col">{{b.preco}}</th>
+                        <td><button class="btn btn-danger" (click)="delete(b)">Remover</button></td>
+                        <td><button class="btn btn-primary" (click)="onClickupdate(b)">Alterar</button></td>
                         
                        
                       </tr>
