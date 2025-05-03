@@ -1,4 +1,31 @@
+<div class="container bg-light p-4">
+    <div class="row">
+        <div class="col-7 m-auto">
+            <h1 class="text-center">Cadastro de Alunos</h1>
+            <form [formGroup]="formGroupBook">
+                <div class="mb-3">
+                  <label for="InputNome" class="form-label">Titulo</label>
+                  <input formControlName="titulo" type="text" class="form-control" id="InputNome" aria-describedby="nameHelp">
+                  <div id="emailHelp" class="form-text">Digite titulo do livro</div>
+                </div>
+                <div class="mb-3">
+                    <label for="InputCourse" class="form-label">Autor</label>
+                    <input formControlName="autor" type="text" class="form-control" id="InputCourse" aria-describedby="CourseHelp">
+                    <div id="emailHelp" class="form-text">Digite o autor do livro</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="InputCourse" class="form-label">Editora</label>
+                    <input formControlName="editora" type="text" class="form-control" id="InputCourse" aria-describedby="CourseHelp">
+                    <div id="emailHelp" class="form-text">Digite a editora do livro</div>
+                  </div>
 
+                  <div class="mb-3">
+                    <label for="InputCourse" class="form-label">Preço</label>
+                    <input formControlName="preco" type="text" class="form-control" id="InputCourse" aria-describedby="CourseHelp">
+                    <div id="emailHelp" class="form-text">Digite o preço do livro</div>
+                  </div>
+                  <button class="btn btn-primary"(click)="save()">Salvar</button>
+           
                 <h2 class="text-center">Livros Cadastrados</h2>
                 <table class="table table-striped">
                   <thead>

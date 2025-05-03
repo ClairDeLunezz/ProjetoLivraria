@@ -1,25 +1,39 @@
 {
-    "books": [
-      {
-        "id": 1,
-        "titulo": "Harry Potter e a Pedra Filosofal",
-        "autor": "J.K. Rowling",
-        "editora": "nsei",
-        "preco": 20.00
-      },
-      {
-        "id": 2,
-        "titulo": "Assim Falava Zaratustra",
-        "autor": "Friedrich Nietzsche",
-        "editora": "nsei",
-        "preco": 50.00
-      },
-      {
-        "id": 3,
-        "titulo": "Diário de um Banana",
-        "autor": "Jeff Kinney",
-        "editora": "nsei",
-        "preco": 30.00
-      }
-    ]
-  }
+  "books": [
+    {
+      "id": 1,
+      "titulo": "Harry Potter e a Pedra Filosofal",
+      "autor": "J.K. Rowling",
+      "editora": "nsei",
+      "preco": 20
+    },
+    {
+      "id": 2,
+      "titulo": "Assim Falava Zaratustra",
+      "autor": "Friedrich Nietzsche",
+      "editora": "nsei",
+      "preco": 50
+    },
+    {
+      "id": 3,
+      "titulo": "Diário de um Banana",
+      "autor": "Jeff Kinney",
+      "editora": "nsei",
+      "preco": 30
+    },
+    {
+      "id": 4,
+      "titulo": "",
+      "autor": "",
+      "editora": "",
+      "preco": ""
+    },
+    {
+      "id": 5,
+      "titulo": "oiashdfvijs",
+      "autor": "kjhasdfjioqas",
+      "editora": "asjkhdfhjsd",
+      "preco": "29.99"
+    }
+  ]
+}
